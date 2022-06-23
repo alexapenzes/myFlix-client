@@ -1,0 +1,38 @@
+$background-color: rgb(25, 29, 50);
+$text-color: rgb(238, 240, 242);
+$tealblue: rgb(51, 109, 130);
+$russiangreen: rgb(115, 149, 111);
+$middlebluegreen: rgb(129, 230, 217);
+$font-family_1: 'Pathway Gothic One', sans-serif;
+$font-family_2: 'League Gothic', sans-serif;
+
+.movie-card {
+    max-width: 300px;
+    border: 3px solid black;
+    border-radius: 15px;
+    color: $text-color;
+    background-color: $tealblue;
+    line-height: 2em;
+    margin: 20px auto;
+    padding: 5px;
+  }
+
+  .button {
+    border: none;
+    display: inline-block;
+    background-color: $middlebluegreen;
+    font-size: 14px;
+    color: $background-color;
+    font-family: $font-family_1;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.2s opacity;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: $middlebluegreen;
+  }
