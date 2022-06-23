@@ -18,6 +18,7 @@
   "homepage": "https://github.com/alexapenzes/myFlix-client#readme",
   "dependencies": {
     "react": "^18.1.0",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {

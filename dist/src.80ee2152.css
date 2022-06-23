@@ -1,0 +1,18 @@
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  background-color: rgb(25, 29, 50);
+  color: rgb(238, 240, 242);
+}
+
+h1 {
+  font-family: "League Gothic", sans-serif;
+}
+
+@media (max-width: 797px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/*# sourceMappingURL=/src.80ee2152.css.map */

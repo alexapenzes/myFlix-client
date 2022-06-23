@@ -1,0 +1,88 @@
+$background-color: rgb(25, 29, 50);
+$text-color: rgb(238, 240, 242);
+$tealblue: rgb(51, 109, 130);
+$russiangreen: rgb(115, 149, 111);
+$middlebluegreen: rgb(129, 230, 217);
+$font-family_1: "Pathway Gothic One", sans-serif;
+$font-family_2: "League Gothic", sans-serif;
+
+.movie-view {
+    border: 2px solid $background-color;
+    border-radius: 10px;
+    background-color: $text-color;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  .movie-view-button {
+    border: none;
+    display: inline-block;
+    background-color: $tealblue;
+    font-size: 14px;
+    color: $text-color;
+    font-family: $font-family_1;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.2s opacity;
+  }
+  
+  .movie-view-button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: $tealblue;
+  }
+  
+  .movie-view__title-line {
+    display: block;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .movie-view__line {
+    display: block;
+  }
+  
+  .movie-view__line__label {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .movie-view__line__value {
+    font-size: 18px;
+  }
+  
+  .movie-view__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .movie-info {
+    display: grid;
+    grid-template-rows: 50px 50px 4fr;
+  }
+  
+  .description {
+    padding-top: 3em;
+  }
+  
+  @media (max-width: 700px) {
+    .movie-view__grid {
+      display: block;
+    }
+  
+    .description {
+      padding-top: 1em;
+    }
+  
+    .movie-view__title-line {
+      font-size: 20px;
+    }
+  }

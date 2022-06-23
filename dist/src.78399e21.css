@@ -1,5 +1,126 @@
-.my-flix {
-  color: steelblue;
+.login {
+  background-color: rgb(238, 240, 242);
+  color: rgb(25, 29, 50);
+  margin-top: 100px;
+}
+
+.btn,
+.button {
+  border: none;
+  display: inline-block;
+  background-color: rgb(51, 109, 130);
+  font-size: 14px;
+  color: rgb(238, 240, 242);
+  font-family: "Pathway Gothic One", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+}
+
+.btn:hover, .btn:focus,
+.button:hover, .button:focus {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: rgb(51, 109, 130);
+}
+.movie-view {
+  border: 2px solid rgb(25, 29, 50);
+  border-radius: 10px;
+  background-color: rgb(238, 240, 242);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.movie-view-button {
+  border: none;
+  display: inline-block;
+  background-color: rgb(51, 109, 130);
+  font-size: 14px;
+  color: rgb(238, 240, 242);
+  font-family: "Pathway Gothic One", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+}
+
+.movie-view-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: rgb(51, 109, 130);
+}
+
+.movie-view__title-line {
+  display: block;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.movie-view__line {
+  display: block;
+}
+
+.movie-view__line__label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.movie-view__line__value {
+  font-size: 18px;
+}
+
+.movie-view__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.movie-info {
+  display: grid;
+  grid-template-rows: 50px 50px 4fr;
+}
+
+.description {
+  padding-top: 3em;
+}
+
+@media (max-width: 700px) {
+  .movie-view__grid {
+    display: block;
+  }
+
+  .description {
+    padding-top: 1em;
+  }
+
+  .movie-view__title-line {
+    font-size: 20px;
+  }
+}
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  background-color: rgb(25, 29, 50);
+  color: rgb(238, 240, 242);
+}
+
+h1 {
+  font-family: "League Gothic", sans-serif;
+}
+
+@media (max-width: 797px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */
