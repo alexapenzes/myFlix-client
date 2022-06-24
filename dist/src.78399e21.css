@@ -25,16 +25,65 @@
   opacity: 0.5;
   background-color: rgb(51, 109, 130);
 }
+.movie-card {
+  height: 100%;
+  border-radius: 15px;
+  color: rgb(238, 240, 242);
+  background-color: rgb(51, 109, 130);
+  margin-bottom: auto;
+  padding: 10px;
+}
+
+.card-img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#movie-card {
+  margin: 10px;
+}
+
+.card-title {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.description {
+  font-size: 13px;
+  overflow: hidden;
+  height: 100px;
+}
+
+.open {
+  border: none;
+  display: inline-block;
+  background-color: rgb(129, 230, 217);
+  font-size: 14px;
+  color: rgb(25, 29, 50);
+  font-family: "Pathway Gothic One", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+}
+
+.open:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: rgb(129, 230, 217);
+  color: rgb(25, 29, 50);
+}
 .movie-view {
-  border: 2px solid rgb(25, 29, 50);
-  border-radius: 10px;
-  background-color: rgb(238, 240, 242);
+  background-color: rgb(25, 29, 50);
 }
 
 img {
   display: block;
-  max-width: 100%;
-  max-height: 500px;
+  max-width: 300px;
+  max-height: 1350px;
   height: auto;
   margin: 20px auto;
 }
@@ -59,24 +108,16 @@ img {
   background-color: rgb(51, 109, 130);
 }
 
-.movie-view__title-line {
+.movie-view-title {
   display: block;
   text-align: left;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "League Gothic", sans-serif;
 }
 
-.movie-view__line {
-  display: block;
-}
-
-.movie-view__line__label {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.movie-view__line__value {
-  font-size: 18px;
+.card-body {
+  padding: 10px;
 }
 
 .movie-view__grid {
@@ -89,21 +130,9 @@ img {
   grid-template-rows: 50px 50px 4fr;
 }
 
-.description {
-  padding-top: 3em;
-}
-
 @media (max-width: 700px) {
   .movie-view__grid {
     display: block;
-  }
-
-  .description {
-    padding-top: 1em;
-  }
-
-  .movie-view__title-line {
-    font-size: 20px;
   }
 }
 body {

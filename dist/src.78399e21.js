@@ -41618,7 +41618,13 @@ function LoginView(props) {
     variant: "primary",
     type: "submit",
     onClick: handleSubmit
-  }, "Submit"))))), /*#__PURE__*/_react.default.createElement(_Col.default, null)));
+  }, "Submit"), /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "Need an account?"), /*#__PURE__*/_react.default.createElement(_Button.default, {
+    onClick: function onClick() {
+      window.location.href = 'registration-view.jsx';
+    },
+    variant: "link",
+    type: "button"
+  }, "Sign up"))))), /*#__PURE__*/_react.default.createElement(_Col.default, null)));
 } // prop-types
 // Give informational warnings in browser if data does not match required shape
 
@@ -41694,15 +41700,22 @@ var MovieCard = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           movie = _this$props.movie,
           onMovieClick = _this$props.onMovieClick;
-      return /*#__PURE__*/_react.default.createElement(_Card.default, null, /*#__PURE__*/_react.default.createElement(_Card.default.Img, {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        id: "movie-card"
+      }, /*#__PURE__*/_react.default.createElement(_Card.default, {
+        className: "movie-card"
+      }, /*#__PURE__*/_react.default.createElement(_Card.default.Img, {
         variant: "top",
         src: movie.ImagePath
-      }), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, movie.Title), /*#__PURE__*/_react.default.createElement(_Card.default.Text, null, movie.Description), /*#__PURE__*/_react.default.createElement(_Button.default, {
+      }), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, movie.Title), /*#__PURE__*/_react.default.createElement(_Card.default.Text, {
+        className: "description"
+      }, movie.Description), /*#__PURE__*/_react.default.createElement(_Button.default, {
+        className: "open",
         onClick: function onClick() {
           return onMovieClick(movie);
         },
         variant: "link"
-      }, "Open")));
+      }, "Open"))));
     }
   }]);
 
@@ -41778,14 +41791,19 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           movie = _this$props.movie,
           onBackClick = _this$props.onBackClick;
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement(_Card.default, {
         className: "movie-view"
-      }, /*#__PURE__*/_react.default.createElement(_Card.default, null, /*#__PURE__*/_react.default.createElement(_Card.default.Header, null), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, movie.Title), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Genre: ", movie.Genre.Name), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Director: ", movie.Director.Name), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Description: ", movie.Description), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("button", {
+      }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, null, /*#__PURE__*/_react.default.createElement(_Card.default.Img, {
+        variant: "top",
+        src: movie.ImagePath
+      })), /*#__PURE__*/_react.default.createElement(_Card.default.Body, {
+        className: "movie-view-title"
+      }, movie.Title), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Genre: ", movie.Genre.Name), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Director: ", movie.Director.Name), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, "Description:", /*#__PURE__*/_react.default.createElement("br", null), movie.Description), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("button", {
         className: "movie-view-button",
         onClick: function onClick() {
           onBackClick(null);
         }
-      }, "Back"))));
+      }, "Back")));
     }
   }]);
 
@@ -42040,7 +42058,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56151" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50862" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
