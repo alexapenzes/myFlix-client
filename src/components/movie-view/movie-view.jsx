@@ -9,15 +9,14 @@ export class MovieView extends React.Component {
     const { movie, onBackClick } = this.props;
 
     return (
-      <div className="movie-view">
-        <Card>
+        <Card className="movie-view">
           <Card.Header>
-            {/* <Card.Img variant="top" src={movie.ImagePath} /> */}
+            <Card.Img variant="top" src={movie.ImagePath} />
           </Card.Header>
-          <Card.Body>{movie.Title}</Card.Body>
+          <Card.Body className="movie-view-title">{movie.Title}</Card.Body>
           <Card.Body>Genre: {movie.Genre.Name}</Card.Body>
           <Card.Body>Director: {movie.Director.Name}</Card.Body>
-          <Card.Body>Description: {movie.Description}</Card.Body>
+          <Card.Body>Description:<br></br>{movie.Description}</Card.Body>
           <Card.Footer>
             <button
               className="movie-view-button"
@@ -29,7 +28,6 @@ export class MovieView extends React.Component {
             </button>
           </Card.Footer>
         </Card>
-      </div>
     );
   }
 }

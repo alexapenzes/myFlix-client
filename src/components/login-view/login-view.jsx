@@ -49,6 +49,16 @@ export function LoginView(props) {
                 <Button variant="primary" type="submit" onClick={handleSubmit}>
                   Submit
                 </Button>
+                <Card.Title>Need an account?</Card.Title>
+                  <Button
+                    onClick={() => {
+                      window.location.href = 'registration-view.jsx';
+                    }}
+                    variant="link"
+                    type="button"
+                  >
+                    Sign up
+                  </Button>
               </Form>
             </Card.Body>
           </Card>
