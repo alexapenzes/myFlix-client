@@ -7,19 +7,58 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
 
 import "./login-view.scss";
+
+import axios from "axios";
 
 export function LoginView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  // Declare hook for each input
+  const [usernameErr, setUsernameErr] = useState("");
+  const [passwordErr, setPasswordErr] = useState("");
+
+  // validate user inputs
+  const validate = () => {
+    let isReq = true;
+    if (!username) {
+      setUsernameErr("Username Required");
+      isReq = false;
+    } else if (username.length < 5) {
+      setUsernameErr("Username must be atleast 5 characters long");
+      isReq = false;
+    }
+    if (!password) {
+      setPasswordErr("Password Required");
+      isReq = false;
+    } else if (password.length < 6) {
+      setPassword("Password must be atleast 6 characters long");
+      isReq = false;
+    }
+
+    return isReq;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
-    /* Send a request to the server for authentication */
-    /* then call props.onLoggedIn(username) */
-    props.onLoggedIn(username);
+    const isReq = validate();
+    if (isReq) {
+      /* Send a request to the server for authentication */
+      axios
+        .post("https://ap-myflix.herokuapp.com/login", {
+          Username: username,
+          Password: password,
+        })
+        .then((response) => {
+          const data = response.data;
+          props.onLoggedIn(data);
+        })
+        .catch((e) => {
+          console.log("no such user");
+        });
+    }
   };
 
   return (
@@ -35,30 +74,37 @@ export function LoginView(props) {
                   <Form.Label>Username:</Form.Label>
                   <Form.Control
                     type="text"
+                    placeholder="Enter username"
+                    value={username}
                     onChange={(e) => setUsername(e.target.value)}
                   />
+                  {/* code added here to display validation error */}
+                  {usernameErr && <p>{usernameErr}</p>}
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
                   <Form.Label>Password:</Form.Label>
                   <Form.Control
                     type="password"
+                    placeholder="Password"
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
+                  {/* code added here to display validation error */}
+                  {passwordErr && <p>{passwordErr}</p>}
                 </Form.Group>
-                <Button variant="primary" type="submit" onClick={handleSubmit}>
+                <Button
+                  className="login-button"
+                  variant="primary"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
                   Submit
                 </Button>
-                <Card.Title>Need an account?</Card.Title>
-                  <Button
-                    onClick={() => {
-                      window.location.href = 'registration-view.jsx';
-                    }}
-                    variant="link"
-                    type="button"
-                  >
-                    Sign up
-                  </Button>
+                <br></br>
+                <p>
+                  Need an account? <Link to={"/register"}>Sign up</Link>
+                </p>
               </Form>
             </Card.Body>
           </Card>
