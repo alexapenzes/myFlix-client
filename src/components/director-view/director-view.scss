@@ -1,0 +1,65 @@
+$background-color: rgb(25, 29, 50);
+$text-color: rgb(238, 240, 242);
+$tealblue: rgb(51, 109, 130);
+$russiangreen: rgb(115, 149, 111);
+$middlebluegreen: rgb(129, 230, 217);
+$font-family_1: "Pathway Gothic One", sans-serif;
+$font-family_2: "League Gothic", sans-serif;
+
+.dir-view {
+  background-color: $background-color;
+}
+
+.dir-view-header {
+  font-variant: small-caps;
+  font-size: 25px;
+}
+
+.dir-view-button {
+  border: none;
+  display: inline-block;
+  background-color: $tealblue;
+  font-size: 14px;
+  color: $text-color;
+  font-family: $font-family_1;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+  width: 100%;
+}
+
+.dir-view-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: $tealblue;
+}
+
+.dir-view-title {
+  display: block;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: $font-family_2;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.dir-view__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dir-info {
+  display: grid;
+  grid-template-rows: 50px 50px 4fr;
+}
+
+@media (max-width: 700px) {
+  .dir-view__grid {
+    display: block;
+  }
+}
