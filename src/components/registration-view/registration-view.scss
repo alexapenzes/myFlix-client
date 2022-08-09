@@ -3,33 +3,47 @@ $text-color: rgb(238, 240, 242);
 $tealblue: rgb(51, 109, 130);
 $russiangreen: rgb(115, 149, 111);
 $middlebluegreen: rgb(129, 230, 217);
-$font-family_1: 'Pathway Gothic One', sans-serif;
-$font-family_2: 'League Gothic', sans-serif;
+$font-family_1: "Pathway Gothic One", sans-serif;
+$font-family_2: "League Gothic", sans-serif;
 
 .register {
-    background-color: $text-color;
-    color: $background-color;
-    margin-top: 100px;
+  background-color: $text-color;
+  color: $background-color;
+  margin-top: 100px;
 }
 
-.btn,
-.button {
-    border: none;
-    display: inline-block;
-    background-color: $tealblue;
-    font-size: 14px;
-    color: $text-color;
-    font-family: $font-family_1;
-    text-decoration: none;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    transition: 0.2s opacity;
+.register {
+  border: none;
+  display: inline-block;
+  background-color: $tealblue;
+  font-size: 14px;
+  color: $text-color;
+  font-family: $font-family_1;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
 }
 
-.btn:hover, .btn:focus,
-.button:hover, .button:focus {
-    cursor: pointer;
-    opacity: 0.5;
-    background-color: $tealblue;
+.register:hover,
+.register:focus {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: $tealblue;
+}
+
+.reg-inputs {
+  padding-bottom: 10px;
+}
+
+.a {
+  color: $tealblue;
+  text-decoration: none;
+}
+
+.a:hover,
+.a:focus {
+  text-decoration: none;
+  color: $russiangreen;
 }

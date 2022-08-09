@@ -6,14 +6,7 @@ $middlebluegreen: rgb(129, 230, 217);
 $font-family_1: "Pathway Gothic One", sans-serif;
 $font-family_2: "League Gothic", sans-serif;
 
-.login.card {
-  background-color: $text-color;
-  color: $background-color;
-  margin-top: 100px;
-  width: 500px;
-}
-
-.login-button {
+.logout {
   border: none;
   display: inline-block;
   background-color: $tealblue;
@@ -25,19 +18,14 @@ $font-family_2: "League Gothic", sans-serif;
   padding: 10px;
   border-radius: 8px;
   transition: 0.2s opacity;
+  width: 100%;
 }
 
-.login-button:hover,
-.login:focus {
+.logout:hover,
+.logout:focus {
   cursor: pointer;
   opacity: 0.5;
   background-color: $tealblue;
-}
-
-@media all and (max-width: 775px) {
-  .login.card {
-    width: 300px;
-    display: block;
-    margin: 15px;
-  }
+  color: $background-color;
+  text-decoration: none;
 }

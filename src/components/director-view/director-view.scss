@@ -6,14 +6,16 @@ $middlebluegreen: rgb(129, 230, 217);
 $font-family_1: "Pathway Gothic One", sans-serif;
 $font-family_2: "League Gothic", sans-serif;
 
-.login.card {
-  background-color: $text-color;
-  color: $background-color;
-  margin-top: 100px;
-  width: 500px;
+.dir-view {
+  background-color: $background-color;
 }
 
-.login-button {
+.dir-view-header {
+  font-variant: small-caps;
+  font-size: 25px;
+}
+
+.dir-view-button {
   border: none;
   display: inline-block;
   background-color: $tealblue;
@@ -25,19 +27,39 @@ $font-family_2: "League Gothic", sans-serif;
   padding: 10px;
   border-radius: 8px;
   transition: 0.2s opacity;
+  width: 100%;
 }
 
-.login-button:hover,
-.login:focus {
+.dir-view-button:hover {
   cursor: pointer;
   opacity: 0.5;
   background-color: $tealblue;
 }
 
-@media all and (max-width: 775px) {
-  .login.card {
-    width: 300px;
+.dir-view-title {
+  display: block;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: $font-family_2;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.dir-view__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dir-info {
+  display: grid;
+  grid-template-rows: 50px 50px 4fr;
+}
+
+@media (max-width: 700px) {
+  .dir-view__grid {
     display: block;
-    margin: 15px;
   }
 }

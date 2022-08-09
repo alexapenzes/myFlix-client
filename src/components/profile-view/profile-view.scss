@@ -1,0 +1,29 @@
+$background-color: rgb(25, 29, 50);
+$text-color: rgb(238, 240, 242);
+$tealblue: rgb(51, 109, 130);
+$russiangreen: rgb(115, 149, 111);
+$middlebluegreen: rgb(129, 230, 217);
+$font-family_1: "Pathway Gothic One", sans-serif;
+$font-family_2: "League Gothic", sans-serif;
+
+.row {
+  margin: 10px;
+}
+
+.user-profile {
+  background-color: $text-color;
+  color: $background-color;
+  padding-bottom: 10px;
+}
+
+.update-inputs {
+  background-color: $text-color;
+  color: $background-color;
+  padding-bottom: 10px;
+}
+
+.favmov-inputs {
+  background-color: $text-color;
+  color: $background-color;
+  padding-bottom: 10px;
+}
