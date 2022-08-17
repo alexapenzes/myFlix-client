@@ -1,61 +1,3 @@
-.logout {
-  border: none;
-  display: inline-block;
-  background-color: rgb(51, 109, 130);
-  font-size: 14px;
-  color: rgb(238, 240, 242);
-  font-family: "Pathway Gothic One", sans-serif;
-  text-decoration: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: 0.2s opacity;
-  width: 100%;
-}
-
-.logout:hover,
-.logout:focus {
-  cursor: pointer;
-  opacity: 0.5;
-  background-color: rgb(51, 109, 130);
-  color: rgb(25, 29, 50);
-  text-decoration: none;
-}
-.login.card {
-  background-color: rgb(238, 240, 242);
-  color: rgb(25, 29, 50);
-  margin-top: 100px;
-  width: 500px;
-}
-
-.login-button {
-  border: none;
-  display: inline-block;
-  background-color: rgb(51, 109, 130);
-  font-size: 14px;
-  color: rgb(238, 240, 242);
-  font-family: "Pathway Gothic One", sans-serif;
-  text-decoration: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: 0.2s opacity;
-}
-
-.login-button:hover,
-.login:focus {
-  cursor: pointer;
-  opacity: 0.5;
-  background-color: rgb(51, 109, 130);
-}
-
-@media all and (max-width: 775px) {
-  .login.card {
-    width: 300px;
-    display: block;
-    margin: 15px;
-  }
-}
 .movie-card {
   height: 680px;
   border-radius: 15px;
@@ -113,6 +55,64 @@
 @media all and (max-width: 775px) {
   .movie-card {
     height: auto;
+    display: block;
+    margin: 15px;
+  }
+}
+.logout {
+  border: none;
+  display: inline-block;
+  background-color: rgb(51, 109, 130);
+  font-size: 14px;
+  color: rgb(238, 240, 242);
+  font-family: "Pathway Gothic One", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+  width: 100%;
+}
+
+.logout:hover,
+.logout:focus {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: rgb(51, 109, 130);
+  color: rgb(25, 29, 50);
+  text-decoration: none;
+}
+.login.card {
+  background-color: rgb(238, 240, 242);
+  color: rgb(25, 29, 50);
+  margin-top: 100px;
+  width: 500px;
+}
+
+.login-button {
+  border: none;
+  display: inline-block;
+  background-color: rgb(51, 109, 130);
+  font-size: 14px;
+  color: rgb(238, 240, 242);
+  font-family: "Pathway Gothic One", sans-serif;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+}
+
+.login-button:hover,
+.login:focus {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: rgb(51, 109, 130);
+}
+
+@media all and (max-width: 775px) {
+  .login.card {
+    width: 300px;
     display: block;
     margin: 15px;
   }
