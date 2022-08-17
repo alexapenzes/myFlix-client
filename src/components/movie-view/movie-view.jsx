@@ -44,6 +44,15 @@ export class MovieView extends React.Component {
           >
             Back
           </Button>
+          {` `}
+              <Button
+                variant="outline-primary"
+                className="movie-view-button"
+                value={movie._id}
+                onClick={(e) => this.addFavoriteMovie(e, movie)}
+              >
+                Add to Favorites
+              </Button>
         </Card.Footer>
       </Card>
     );
