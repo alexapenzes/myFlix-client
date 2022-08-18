@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Figure from 'react-bootstrap/Figure';
 
 // Import custom SCSS
 import "./profile-view.scss";
@@ -32,8 +33,8 @@ export class ProfileView extends React.Component {
   }
 
   onRemoveFavorite = (e, movie) => {
-    const username = localStorage.getItem("user");
-    console.log(username);
+    const Username = localStorage.getItem("user");
+    console.log(Username);
     const token = localStorage.getItem("token");
     console.log(this.props);
     axios
@@ -265,18 +266,14 @@ export class ProfileView extends React.Component {
         </Row>
         <Row></Row>
         <Card className="favmov-inputs">
+          <Card.Header><h4>Favorite Movies</h4></Card.Header>
           <Card.Body>
-            <Row>
-              <Col xs={12}>
-                <h4>Favorite Movies</h4>
-              </Col>
-            </Row>
             <Row>
               {FavoriteMovies.map((ImagePath, Title, _id) => {
                 return (
                   <Col key={_id} className="fav-movie">
                     <Figure>
-                      <Link to={`/movies/${movie._id}`}>
+                      <Link to={`/movies/${_id}`}>
                         <Figure.Image src={ImagePath} alt={Title} />
                         <Figure.Caption>{Title}</Figure.Caption>
                       </Link>
@@ -284,7 +281,7 @@ export class ProfileView extends React.Component {
                     <Button
                       className="remove"
                       variant="secondary"
-                      onClick={() => removeFav(movie._id)}
+                      onClick={() => this.onRemoveFavorite(_id)}
                     >
                       Remove from the list
                     </Button>

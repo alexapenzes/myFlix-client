@@ -141,9 +141,11 @@ class MainView extends React.Component {
               if (!user) return <Redirect to="/" />;
               return (
                 <Col>
-                  <UserUpdate
+                  // 'UserUpdate' doesn't exist. Please create and change back.
+                   <ProfileView
                     user={user}
                     onBackClick={() => history.goBack()}
+                    movies={movies}
                   />
                 </Col>
               );

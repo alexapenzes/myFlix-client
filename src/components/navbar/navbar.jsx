@@ -11,7 +11,7 @@ export function NavBar() {
     e.preventDefault();
     localStorage.clear();
     window.open("/", "_self");
-    props.onLoggedOut(user);
+    this.props.onLoggedOut(user);
   };
 
   const isAuth = () => {
