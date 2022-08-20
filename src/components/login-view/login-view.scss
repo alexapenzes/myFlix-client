@@ -6,6 +6,13 @@ $middlebluegreen: rgb(129, 230, 217);
 $font-family_1: "Pathway Gothic One", sans-serif;
 $font-family_2: "League Gothic", sans-serif;
 
+.container {
+  width: 100%;
+  padding: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .login.card {
   background-color: $text-color;
   color: $background-color;
@@ -37,7 +44,7 @@ $font-family_2: "League Gothic", sans-serif;
 @media all and (max-width: 775px) {
   .login.card {
     width: 300px;
-    display: block;
-    margin: 15px;
+    display: inline-block;
+    margin: -10px;
   }
 }

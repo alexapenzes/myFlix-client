@@ -25,5 +25,42 @@ $font-family_2: "League Gothic", sans-serif;
 .favmov-inputs {
   background-color: $text-color;
   color: $background-color;
-  padding-bottom: 10px;
+  width: 100%;
+}
+
+.figure {
+  text-align: center;
+}
+
+.user-favorites-header {
+  color: $background-color
+}
+
+.update-button, .delete-button {
+  border: none;
+  display: inline-block;
+  background-color: $tealblue;
+  font-size: 14px;
+  color: $text-color;
+  font-family: $font-family_1;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
+  margin: 10px;
+}
+
+.remove {
+  border: none;
+  display: inline-block;
+  background-color: $tealblue;
+  font-size: 14px;
+  color: $text-color;
+  font-family: $font-family_1;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s opacity;
 }
