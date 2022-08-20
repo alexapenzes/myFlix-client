@@ -1,12 +1,46 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import axios from "axios";
 
 import { Link } from "react-router-dom";
 
 import "./movie-view.scss";
 
 export class MovieView extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {};
+  }
+
+  addFavoriteMovie(e) {
+    const { movie } = this.props;
+    e.preventDefault();
+    axios
+      .post(
+        `https://ap-myflix.herokuapp.com/users/${localStorage.getItem(
+          "user"
+        )}/Movies/${movie._id}`,
+        { username: localStorage.getItem("user") },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      )
+      .then((res) => {
+        alert(`${movie.Title} successfully added to your favorites`);
+      })
+      // .then(res => {
+      //   window.open(`/users/${localStorage.getItem('user')}`)
+      // })
+      .then((res) => {
+        document.location.reload(true);
+      })
+      .catch((error) => {
+        alert(`${movie.Title} not added to your favorites` + error);
+      });
+  }
+
   render() {
     const { movie, onBackClick } = this.props;
 
@@ -45,14 +79,14 @@ export class MovieView extends React.Component {
             Back
           </Button>
           {` `}
-              <Button
-                variant="outline-primary"
-                className="movie-view-button"
-                value={movie._id}
-                onClick={(e) => this.addFavoriteMovie(e, movie)}
-              >
-                Add to Favorites
-              </Button>
+          <Button
+            variant="outline-primary"
+            className="movie-view-button"
+            value={movie._id}
+            onClick={(e) => this.addFavoriteMovie(e, movie)}
+          >
+            Add to Favourites
+          </Button>
         </Card.Footer>
       </Card>
     );

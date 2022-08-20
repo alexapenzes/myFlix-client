@@ -10,7 +10,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Figure from 'react-bootstrap/Figure';
+import Figure from "react-bootstrap/Figure";
 
 // Import custom SCSS
 import "./profile-view.scss";
@@ -48,7 +48,7 @@ export class ProfileView extends React.Component {
         this.componentDidMount();
       })
       .catch(function (error) {
-        console.log(error);
+        console.log(error.response.data);
       });
   };
 
@@ -244,7 +244,8 @@ export class ProfileView extends React.Component {
                     </Form.Group>
                     <Form.Group>
                       <Button
-                        variant="warning"
+                        className="update-button"
+                        variant="secondary"
                         type="submit"
                         onClick={() => this.editUser()}
                       >
@@ -252,7 +253,7 @@ export class ProfileView extends React.Component {
                       </Button>
                       <Button
                         className="delete-button"
-                        variant="danger"
+                        variant="secondary"
                         onClick={() => this.onDeleteUser()}
                       >
                         Delete User
@@ -266,28 +267,44 @@ export class ProfileView extends React.Component {
         </Row>
         <Row></Row>
         <Card className="favmov-inputs">
-          <Card.Header><h4>Favorite Movies</h4></Card.Header>
+          <Card.Header>
+            <h4>Favorite Movies</h4>
+          </Card.Header>
           <Card.Body>
             <Row>
-              {FavoriteMovies.map((ImagePath, Title, _id) => {
-                return (
-                  <Col key={_id} className="fav-movie">
-                    <Figure>
-                      <Link to={`/movies/${_id}`}>
-                        <Figure.Image src={ImagePath} alt={Title} />
-                        <Figure.Caption>{Title}</Figure.Caption>
-                      </Link>
-                    </Figure>
-                    <Button
-                      className="remove"
-                      variant="secondary"
-                      onClick={() => this.onRemoveFavorite(_id)}
-                    >
-                      Remove from the list
-                    </Button>
-                  </Col>
-                );
-              })}
+              {FavoriteMovies.length === 0 && (
+                <div className="text-center">No Favorite Movies</div>
+              )}
+              {FavoriteMovies.length > 0 &&
+                movies.map((movie) => {
+                  if (
+                    movie._id ===
+                    FavoriteMovies.find((fav) => fav === movie._id)
+                  ) {
+                    return (
+                      <Col key={movie._id} md={4}>
+                        <Figure>
+                          <Link to={`/movies/${movie._id}`}>
+                            <Figure.Image
+                              className="card-img"
+                              src={movie.ImagePath}
+                              alt={movie.Title}
+                            />
+                            <Figure.Caption>{movie.Title}</Figure.Caption>
+                          </Link>
+                          <Button
+                            className="remove"
+                            variant="secondary"
+                            value={movie._id}
+                            onClick={(e) => this.onRemoveFavorite(e, movie)}
+                          >
+                            Remove
+                          </Button>
+                        </Figure>
+                      </Col>
+                    );
+                  }
+                })}
             </Row>
           </Card.Body>
         </Card>

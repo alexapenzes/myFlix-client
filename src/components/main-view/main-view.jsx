@@ -33,7 +33,7 @@ class MainView extends React.Component {
   constructor() {
     super();
     this.state = {
-      user: null
+      user: null,
     };
   }
 
@@ -104,7 +104,7 @@ class MainView extends React.Component {
                   </Col>
                 );
               if (movies.length === 0) return <div className="main-view" />;
-              return <MoviesList movies={movies}/>;
+              return <MoviesList movies={movies} />;
             }}
           />
 
@@ -142,7 +142,7 @@ class MainView extends React.Component {
               return (
                 <Col>
                   // 'UserUpdate' doesn't exist. Please create and change back.
-                   <ProfileView
+                  <ProfileView
                     user={user}
                     onBackClick={() => history.goBack()}
                     movies={movies}
@@ -226,8 +226,8 @@ class MainView extends React.Component {
   }
 }
 
-let mapStateToProps = state => {
-  return { movies: state.movies }
-}
+let mapStateToProps = (state) => {
+  return { movies: state.movies };
+};
 
 export default connect(mapStateToProps, { setMovies })(MainView);

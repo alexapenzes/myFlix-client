@@ -65,7 +65,7 @@ export function LoginView(props) {
     <Container>
       <Row>
         <Col></Col>
-        <Col>
+        <Col className="card-body align-items-center d-flex justify-content-center">
           <Card className="login">
             <Card.Body>
               <Card.Title>Log in</Card.Title>

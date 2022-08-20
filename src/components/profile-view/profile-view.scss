@@ -33,10 +33,11 @@ $font-family_2: "League Gothic", sans-serif;
 }
 
 .user-favorites-header {
-  color: $background-color
+  color: $background-color;
 }
 
-.update-button, .delete-button {
+.update-button,
+.delete-button {
   border: none;
   display: inline-block;
   background-color: $tealblue;
