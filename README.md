@@ -25,4 +25,4 @@ The frontend for this application consists of one main view that switches betwee
 
 ## Live Demo
 
-...loading
+Check it out [here](https://myflix-ap.herokuapp.com/).
