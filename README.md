@@ -1,7 +1,7 @@
 # myFlix Client
 
 <p align="center">
-  <img height="250" src="https://imgur.com/yedtre6" >
+  <img height="250" src="https://imgur.com/yedtre6.png" >
 </p>
 This single-page, responsive application (SPA) is the client-side for an application called myFlix based on its existing server-side code (REST API and database). It features  routing, rich interactions, several interface views, and a polished user experience.
 
